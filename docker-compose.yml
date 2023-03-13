@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  app:
+    image: dmstr/php-yii2:latest-nginx
+    restart: always
+    container_name: pweb-php
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "7880:80"
